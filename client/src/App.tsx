@@ -1,10 +1,19 @@
-import { useState } from "react";
-import "./App.css";
+import React from "react";
+// Layout
+import Layout from "./components/layout";
+import Sidebar from "./components/layout/Sidebar";
+import Main from "./components/layout/Main";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <Sidebar />
 
-  return <></>;
-}
+      <Layout>
+        <Main />
+      </Layout>
+    </div>
+  );
+};
 
 export default App;
