@@ -8,7 +8,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   return (
-    <main>
+    <main className="w-[100%] h-full">
       <Header />
 
       {children}

@@ -6,7 +6,7 @@ import Main from "./components/layout/Main";
 
 const App: React.FC = () => {
   return (
-    <div className="flex">
+    <div className="w-full h-[100vh] flex">
       <Sidebar />
 
       <Layout>
