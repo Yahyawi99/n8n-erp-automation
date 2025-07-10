@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        dancing: ["Dancing Script", "cursive"],
+        wdxl: ["WDXL Lubrifont SC", "cursive"],
       },
     },
   },
