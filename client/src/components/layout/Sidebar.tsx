@@ -19,6 +19,7 @@ type Option = {
   name: string;
   icon: IconDefinition;
   subOptions?: Option[];
+  sub?: boolean;
 };
 
 const sidebarOptions: Option[] = [
@@ -33,6 +34,7 @@ const sidebarOptions: Option[] = [
       {
         name: "Inventory",
         icon: faBoxesStacked,
+        sub: true,
       },
     ],
   },
@@ -84,20 +86,18 @@ const Sidebar: React.FC = () => {
 
 const Options = ({ data }: { data: Option[] }) => {
   return data.map((option: Option) => {
-    const { name, icon, subOptions } = option;
+    const { name, icon, subOptions, sub } = option;
     return (
-      <li className="cursor-pointer text-[18px]">
-        <div className={`flex items-center gap-2 ${subOptions && "mb-1.5"}`}>
-          <FontAwesomeIcon icon={icon} width={15} />
-          <p className="text-[20px]">{name}</p>
+      <li className="cursor-pointer">
+        <div className={`flex items-center gap-2 ${subOptions && "mb-1"}`}>
+          <FontAwesomeIcon icon={icon} width={sub ? 11 : 15} />
+          <p className={`${sub ? "text-[16px]" : "text-[20px]"}`}>{name}</p>
         </div>
 
-        {subOptions ? (
-          <ul className="flex items-center gap-2 ml-12">
+        {subOptions && (
+          <ul className="flex items-center gap-2 ml-12 text-[16px]">
             <Options data={subOptions} />
           </ul>
-        ) : (
-          ""
         )}
       </li>
     );

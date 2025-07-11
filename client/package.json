@@ -1,5 +1,5 @@
 {
-  "name": "n8n-ERP-Automation",
+  "name": "n8n-erp-automation",
   "author": "Yassine Yahyawi",
   "version": "1.0.0",
   "private": true,
@@ -17,7 +17,8 @@
     "@vitejs/plugin-react": "^4.6.0",
     "classnames": "^2.5.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",
